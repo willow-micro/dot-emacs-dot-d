@@ -9,27 +9,26 @@
 (fset 'package-desc-vers 'package--ac-desc-version)
 (package-initialize)
 
-;; ロードパスを通す
+;; elisp/にロードパスを通す
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
-
-;; PATH
 
 ;; Exec-path form login shell
 (exec-path-from-shell-initialize)
 
 ;; Windows
 (when (eq window-system 'w32)
-  ; 環境変数(msys2)
-  (setenv "PATH" (concat "C:/msys64/usr/bin;" (getenv "PATH")))
-  (add-to-list 'exec-path "C:/msys64/usr/bin;")
-  ;; msys2 shell
-  (setq shell-file-name "C:/msys64/usr/bin/bash")
-  (setq shell-command-switch "-c")
-  (setq explicit-shell-file-name "C:/msys64/usr/bin/bash")
+  ;; ; 環境変数(msys2)
+  ;; (setenv "PATH" (concat "C:/msys64/usr/bin;" (getenv "PATH")))
+  ;; (add-to-list 'exec-path "C:/msys64/usr/bin;")
+  ;; ;; msys2 shell
+  ;; (setq shell-file-name "C:/msys64/usr/bin/bash")
+  ;; (setq shell-command-switch "-c")
+  ;; (setq explicit-shell-file-name "C:/msys64/usr/bin/bash")
 
   ; Client server
   (when (require 'server nil t)
     (server-start)))
+
 ;;IME-Patch
 (when (locate-library "w32-ime")
     (progn
@@ -75,15 +74,16 @@
 (setq eol-mnemonic-mac "(CR)")
 (setq eol-mnemonic-unix "(LF)")
 
-;; *.~ とかのバックアップファイルを作る
+;; *.~ などのバックアップファイルを作る
 (setq make-backup-files t)
-;; .#* とかのバックアップファイルを作る
+;; .#* などのバックアップファイルを作る
 (setq auto-save-default t)
 
 ;; タイトルバーにファイルのフルパス表示
 (setq frame-title-format
       (format "%%f - Emacs@%s" (system-name)))
 
+;; ツールバーなし
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
@@ -443,7 +443,7 @@
          (setq locale-coding-system 'utf-8-hfs))))
 
 ;; TWE
-(setenv "MWSDK_ROOT" "/Users/kawa/MWSTAGE/MWSDK")
+;(setenv "MWSDK_ROOT" "/Users/kawa/MWSTAGE/MWSDK")
 
 ;; SLIME
 ; slime

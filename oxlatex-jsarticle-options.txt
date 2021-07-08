@@ -1,0 +1,45 @@
+\documentclass[dvipdfmx,11pt]{jsarticle}
+
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+\makeatletter
+
+  \def\thefigure{\thesection.\arabic{figure}}
+  \@addtoreset{figure}{section}
+  \newcommand{\subsubsubsection}{
+    \@startsection{paragraph}{4}{\z@}
+    {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}
+    {.1\Cvs \@plus.3\Cdp}
+    {\reset@font\sffamily\normalsize}
+  }
+
+\makeatother
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\makeatletter
+
+\def\thesis#1{\def\@thesis{#1}}
+\def\id#1{\def\@id{#1}}
+
+\def\@maketitle{
+\begin{center}
+{\LARGE \@thesis \par}
+\vspace{5mm}
+{\LARGE \@title \par}
+\vspace{5mm}
+{\large \@date \par}
+\vspace{5mm}
+{\large \@id \hspace{15pt} \@author \par}
+\end{center}
+\par\vskip 1.5em
+}
+
+\makeatother
