@@ -1,0 +1,10 @@
+.recentf
+local/
+server/
+auto-save-list/
+eshell/
+etc/log/*.log
+kkcrc
+ac-comphist.dat
+ido.last
+*.???~
