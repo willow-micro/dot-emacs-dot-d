@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: doxy-copyright
+# key: copy
+# --
+@copyright	2017(C)T.Kawamura

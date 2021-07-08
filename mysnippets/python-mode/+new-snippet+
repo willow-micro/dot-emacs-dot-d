@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Python tab width 4
+# key: tab4
+# --
+# -*- tab-width: 4 -*-

@@ -8,3 +8,5 @@ kkcrc
 ac-comphist.dat
 ido.last
 *.???~
+tramp
+smex-items
