@@ -14,7 +14,7 @@
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
 
 ;; Exec-path form login shell
-(exec-path-from-shell-initialize)
+;(exec-path-from-shell-initialize)
 
 ;; Windows
 (when (eq window-system 'w32)
@@ -168,7 +168,7 @@
  '(desktop-globals-to-save
    '(desktop-missing-file-warning tags-file-name tags-table-list search-ring regexp-search-ring register-alist file-name-history kill-ring))
  '(desktop-save-mode nil)
- '(markdown-command "pandoc")
+ ;'(markdown-command "pandoc")
  '(org-export-backends '(ascii html icalendar latex md odt))
  '(package-selected-packages
    '(arduino-mode add-node-modules-path flycheck typescript-mode web-mode rjsx-mode yaml-mode exec-path-from-shell ox-pandoc htmlize cmake-mode kconfig-mode ac-slime haskell-mode slime markdown-preview-mode ac-geiser geiser swift3-mode smartparens flex-autopair ido-vertical-mode yatex yasnippet smex qml-mode lua-mode ido-completing-read+ auto-complete auto-compile)))
