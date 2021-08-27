@@ -1,4 +1,3 @@
-
 ;; -*- coding: utf-8-unix -*-
 ;; パッケージ管理
 ;; 初期化
@@ -58,7 +57,7 @@
 (setq-default line-spacing 0.2)
 
 ;; メニューバーを消す
-(menu-bar-mode nil)
+;(menu-bar-mode nil)
 
 ;; 行末の空白を保存時に消去
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
